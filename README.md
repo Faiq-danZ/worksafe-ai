@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+# worksafe-ai
+
+Project scaffold for tabular and NLP model training/inference.
+
+## Struktur
+
+```text
+worksafe-ai/
+│── data/
+│── models/
+│   ├── tabular_model/
+│   └── nlp_model/
+│── training/
+│   ├── train_tabular.py
+│   └── train_nlp.py
+│── inference/
+│   ├── predict_tabular.py
+│   └── predict_nlp.py
+│── utils/
+=======
 # WorkSafe AI - AI Module 🤖
 
 WorkSafe AI is a capstone project focused on helping individuals prepare for the future of work by predicting layoff risks and providing reskilling recommendations.
@@ -52,10 +73,24 @@ worksafe-ai/
 │
 │── utils/                # Helper functions (preprocessing, etc.)
 │
+>>>>>>> 247996f0e7d71a0cbebfbb2b7f54269d34b20cc0
 │── requirements.txt
 │── README.md
 ```
 
+<<<<<<< HEAD
+## Quick Start
+
+1. Create virtual env and activate it.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run training script example:
+   ```bash
+   python training/train_tabular.py
+   ```
+=======
 ---
 
 ## ⚙️ Technologies Used
@@ -116,3 +151,4 @@ python inference/predict_tabular.py
 ## 📄 License
 
 This project is developed for educational purposes as part of Dicoding DBS Foundation Capstone Program.
+>>>>>>> 247996f0e7d71a0cbebfbb2b7f54269d34b20cc0
