@@ -1,154 +1,121 @@
-<<<<<<< HEAD
-# worksafe-ai
+# WorkSafe AI - Deteksi Risiko PHK & Reskilling Otomatis
 
-Project scaffold for tabular and NLP model training/inference.
+## Deskripsi Proyek
 
-## Struktur
+WorkSafe AI adalah aplikasi berbasis Artificial Intelligence yang dirancang untuk mendeteksi risiko Pemutusan Hubungan Kerja (PHK) serta memberikan rekomendasi reskilling secara otomatis. Sistem ini memanfaatkan data tabular dan data teks untuk menghasilkan prediksi yang akurat dan relevan dalam mendukung kesiapan kerja di masa depan.
+
+Proyek ini dikembangkan sebagai bagian dari program DBS Foundation Coding Camp - AI Engineer (Dicoding) dalam bentuk Capstone Project.
+
+## Tujuan Proyek
+
+- Mengidentifikasi risiko PHK berdasarkan data pengguna
+- Memberikan rekomendasi reskilling yang sesuai
+- Mendukung pengambilan keputusan berbasis data
+- Meningkatkan kesiapan tenaga kerja menghadapi perubahan ekonomi
+
+## Struktur Proyek
 
 ```text
 worksafe-ai/
-│── data/
-│── models/
-│   ├── tabular_model/
-│   └── nlp_model/
-│── training/
-│   ├── train_tabular.py
-│   └── train_nlp.py
-│── inference/
-│   ├── predict_tabular.py
-│   └── predict_nlp.py
-│── utils/
-=======
-# WorkSafe AI - AI Module 🤖
-
-WorkSafe AI is a capstone project focused on helping individuals prepare for the future of work by predicting layoff risks and providing reskilling recommendations.
-
-This repository contains the Artificial Intelligence (AI) components of the system, including deep learning models for tabular data and natural language processing (NLP).
-
----
-
-## 🎯 Project Objective
-
-To build AI models that can:
-
-* Predict the risk of layoffs (PHK) based on employee data
-* Provide intelligent recommendations for reskilling using NLP
-
----
-
-## 🧠 AI Components
-
-### 1. Tabular Risk Prediction Model
-
-* Type: Binary Classification
-* Framework: TensorFlow (Functional API)
-* Input: Structured/tabular employee data
-* Output: Probability of layoff risk
-
-### 2. NLP Classification Model
-
-* Type: Text Classification
-* Framework: TensorFlow
-* Input: Text data (e.g., job descriptions, skills)
-* Output: Reskilling or job-related predictions
-
----
-
-## 📁 Project Structure
-
-```
-worksafe-ai/
-│── data/                 # Dataset (final from Data Science team)
-│── models/               # Saved models (.keras)
-│   ├── tabular_model/
-│   └── nlp_model/
-│
-│── training/             # Training scripts
-│   ├── train_tabular.py
-│   └── train_nlp.py
-│
-│── inference/            # Prediction scripts
-│   ├── predict_tabular.py
-│   └── predict_nlp.py
-│
-│── utils/                # Helper functions (preprocessing, etc.)
-│
->>>>>>> 247996f0e7d71a0cbebfbb2b7f54269d34b20cc0
-│── requirements.txt
-│── README.md
+|
+|-- data/
+|   `-- .gitkeep
+|
+|-- models/
+|   |-- tabular_model/
+|   |   `-- .gitkeep
+|   `-- nlp_model/
+|       `-- .gitkeep
+|
+|-- training/
+|   |-- train_tabular.py
+|   `-- train_nlp.py
+|
+|-- inference/
+|   |-- predict_tabular.py
+|   `-- predict_nlp.py
+|
+|-- utils/
+|   |-- __init__.py
+|   `-- preprocessing.py
+|
+|-- requirements.txt
+`-- README.md
 ```
 
-<<<<<<< HEAD
-## Quick Start
+## Teknologi yang Digunakan
 
-1. Create virtual env and activate it.
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run training script example:
-   ```bash
-   python training/train_tabular.py
-   ```
-=======
----
+- Python
+- TensorFlow (Deep Learning)
+- NumPy & Pandas
+- Scikit-learn
+- Natural Language Processing (NLP)
 
-## ⚙️ Technologies Used
+## Tim Pengembang
 
-* Python
-* TensorFlow / Keras
-* NumPy
-* Pandas
-* Scikit-learn
+### AI Engineer
 
----
+- Ahmad Faiq Zidane - Tabular Risk Score Model
+- Sefiand Neeza Efendy - NLP Classification Model
 
-## 🚀 How to Run (Basic)
+## Pembagian Tugas AI Engineer
 
-### 1. Install dependencies
+### Tabular Model (Risk Score)
 
+- Mengembangkan model prediksi risiko PHK berbasis data tabular
+- Menggunakan TensorFlow Functional API
+- Mengimplementasikan Custom Loss Function
+- Melakukan training dan evaluasi model
+
+### NLP Model (Text Classification)
+
+- Mengembangkan model klasifikasi teks
+- Menggunakan Custom Layer dan Custom Callback
+- Melakukan preprocessing teks
+- Melakukan training dan evaluasi model
+
+## Alur Pengembangan Model
+
+1. Data dikumpulkan dan diproses oleh tim Data Science
+2. Data dibersihkan dan dipersiapkan untuk modeling
+3. Model dikembangkan dan dilatih menggunakan TensorFlow
+4. Model dievaluasi menggunakan metrik yang sesuai
+5. Model disimpan dalam format .keras atau SavedModel
+6. Model digunakan untuk inference dalam aplikasi
+
+## Cara Menjalankan Project
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/Faiq-danZ/worksafe-ai.git
+cd worksafe-ai
 ```
+
+### 2. Install Dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 2. Train model
+### 3. Training Model
 
-```
+```bash
 python training/train_tabular.py
 ```
 
-### 3. Run inference
+### 4. Inference
 
-```
+```bash
 python inference/predict_tabular.py
 ```
 
----
+## Status Proyek
 
-## 🧪 Model Development Notes
+Tahap pengembangan awal (Checkpoint 1 - Project Planning)
 
-* The tabular model uses **TensorFlow Functional API**
-* Includes a **custom loss function** to handle imbalanced data
-* Models are saved in `.keras` format for production use
+## Catatan
 
----
-
-## 👥 Team Members
-
-* **Ahmad Faiq Zidane** – Tabular Risk Model (AI Engineer)
-* **Sefiand Neeza Efendy** – NLP Model (AI Engineer)
-
----
-
-## 📌 Notes
-
-* Dataset is provided and processed by the Data Science team
-* This repository focuses only on AI model development
-* Further integration will be handled with the backend team
-
----
-
-## 📄 License
-
-This project is developed for educational purposes as part of Dicoding DBS Foundation Capstone Program.
->>>>>>> 247996f0e7d71a0cbebfbb2b7f54269d34b20cc0
+- Dataset akan disediakan oleh tim Data Science
+- Disarankan menggunakan Google Colab untuk proses training model
+- Folder environment seperti venv/ tidak disertakan dalam repository
