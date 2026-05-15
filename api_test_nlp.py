@@ -18,7 +18,7 @@ source venv/bin/activate
 pip install fastapi uvicorn tensorflow numpy openrouter
 
 Jalankan API:
-uvicorn openroute_test:app --reload --host 0.0.0.0 --port 8000
+uvicorn api_test_nlp:app --reload --host 0.0.0.0 --port 8000
 
 Buka dokumentasi:
 http://127.0.0.1:8000/docs
